@@ -30,7 +30,10 @@ export function getCohort(student) {
  * sortStudents({cohort: 1, name: "Alice"}, {cohort: 2, name: "Alice"}); // {cohort: 1, name: "Alice"}
  */
 export function sortStudents(studentA, studentB) {
-  // TODO
+  if (studentA.name <= studentB.name) return studentA;
+  else {
+    return studentB;
+  }
 }
 
 /**
@@ -55,7 +58,7 @@ export function makeFlag(color, icon) {
  * @param {Count} count
  * @returns {Count} a count whose value is 1 more than the given count
  *
- * @example
+ * @example)
  * increment({value: 1}); // {value: 2}
  * @example
  * increment({value: 0}); // {value: 1}
