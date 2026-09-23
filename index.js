@@ -66,7 +66,8 @@ export function makeFlag(color, icon) {
  * increment({value: -5}); // {value: -4}
  */
 export function increment(count) {
-  // TODO
+  count.value = count.value + 1;
+  return count;
 }
 
 /**
