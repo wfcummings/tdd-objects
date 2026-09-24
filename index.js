@@ -116,7 +116,14 @@ export function getTaxicabDistance(from, to) {
  * getHerbivores([{name: "Rabbit", isHerbivore: true}]); // [{name: "Rabbit", isHerbivore: true}]
  */
 export function getHerbivores(animals) {
-  // TODO
+  let newAnimals = [];
+
+  for (const herbivore of animals) {
+    if (herbivore.isHerbivore) {
+      newAnimals.push(herbivore);
+    }
+  }
+  return newAnimals;
 }
 
 /**
