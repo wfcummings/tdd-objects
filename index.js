@@ -167,7 +167,12 @@ export function getCarnivoreNames(animals) {
  * getTotalCost([{name: "Notebook", quantity: 0, price: 5}]); // 0
  */
 export function getTotalCost(cart) {
-  // TODO
+  let totalCost = 0;
+  cart.cost = cart.quantity * cart.price;
+  for (const item of cart) {
+    totalCost += item.quantity * item.price;
+  }
+  return totalCost;
 }
 
 /**
