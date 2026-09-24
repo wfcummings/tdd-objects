@@ -94,7 +94,13 @@ export function increment(count) {
  *
  */
 export function getTaxicabDistance(from, to) {
-  // TODO
+  if (from.x === to.x && from.y === to.y) return 0;
+
+  let sumX = to.x - from.x;
+  let sumY = to.y - from.y;
+  let totalSum = sumX + sumY;
+
+  return Math.abs(totalSum);
 }
 
 /**
