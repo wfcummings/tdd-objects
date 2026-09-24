@@ -12,6 +12,8 @@
  */
 export function getCohort(student) {
   return student.cohort;
+  //return student["cohort"]; works
+  // return student[cohort]; doesnt work undefined
 }
 
 /**
@@ -51,6 +53,17 @@ export function sortStudents(studentA, studentB) {
  */
 export function makeFlag(color, icon) {
   return { color, icon };
+
+  //const flag = {};
+  //flag.color = color;
+  //flag.icon = icon;
+  //return flag;
+
+  /*const flag = {
+    color: color,
+    icon: icon
+  }
+  return flag;*/
 }
 
 /**
@@ -94,13 +107,15 @@ export function increment(count) {
  *
  */
 export function getTaxicabDistance(from, to) {
-  if (from.x === to.x && from.y === to.y) return 0;
+  /*if (from.x === to.x && from.y === to.y) return 0;
 
   let sumX = to.x - from.x;
   let sumY = to.y - from.y;
   let totalSum = sumX + sumY;
 
-  return Math.abs(totalSum);
+  return Math.abs(totalSum);*/
+
+  return Math.abs(from.x - to.x) + Math.abs(from.y - to.y);
 }
 
 /**
